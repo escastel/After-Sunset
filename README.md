@@ -1,61 +1,55 @@
 🌅 After Sunset
 =============================
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![Android](https://img.shields.io/badge/Android-API%2026+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/)
+[![Jetpack Compose](https://img.shields.io/badge/Jetpack%20Compose-UI-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)](https://developer.android.com/jetpack/compose)
+[![Firebase](https://img.shields.io/badge/Firebase-Backend-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 
-**After Sunset** es una propuesta disruptiva en el ecosistema de aplicaciones de ocio nocturno. No es solo una ticketera; es una ventana inmersiva a la vida de la ciudad cuando cae el sol. Diseñada con un enfoque Mobile-First y una estética Cyber-Night, After Sunset redefine la forma en que los usuarios descubren, viven y comparten la noche.
+**After Sunset** es una propuesta disruptiva en el ecosistema de aplicaciones de ocio nocturno. No es solo una ticketera; es una ventana inmersiva a la vida de la ciudad cuando cae el sol. Diseñada con un enfoque Mobile-First y una estética Cyber-Night, After Sunset redefine la forma en que los usuarios descubren, viven y comparten la noche malagueña.
 
-![Banner](./images/banner.png)  
+---
 
-🛠️ Stack Tecnológico
---------------------
--   **Lenguaje:** [Kotlin](https://kotlinlang.org/)
+## ✨ Características Principales
 
--   **UI:** [Jetpack Compose](https://developer.android.com/jetpack/compose) (Arquitectura declarativa).
+*   🌌 **Diseño Inmersivo "Cyber-Night"**: Interfaz de usuario moderna y oscura construida con **Jetpack Compose**, utilizando degradados dinámicos y animaciones fluidas.
+*   📍 **Geolocalización en Tiempo Real**: Integración con **Google Maps SDK** para visualizar locales abiertos, filtrar por zonas de Málaga y obtener rutas directas.
+*   🎟️ **Ticketing Inteligente**: Sistema de compra de entradas integrado con generación de **códigos QR** únicos para el control de acceso.
+*   🤖 **Avatares Dinámicos**: Integración con la **API de DiceBear** para generar fotos de perfil aleatorias y estilizadas (estilo *bottts*) para cada usuario.
+*   👥 **Ecosistema Social**: Gestión de amistades, búsqueda de usuarios por `@username` y sistema de reseñas con valoración por estrellas.
+*   🏆 **Fidelización**: Sistema de rangos dinámicos (Standard, VIP, Gold, Legendary) basado en la participación del usuario.
 
--   **Navegación:** [Type-Safe Navigation](https://developer.android.com/guide/navigation/design/type-safety).
+---
 
--   **Imágenes:** [Coil 3](https://coil-kt.github.io/coil/) (Modular & Network Support).
+## 🛠️ Stack Tecnológico
 
--   **Backend:** [Firebase](https://firebase.google.com/) (Auth, Firestore, Storage).
-
-🏗️ Arquitectura
-----------------
-
-El proyecto sigue el patrón **MVVM (Model-View-ViewModel)** y el **Repository Pattern** para separar la lógica de negocio de la interfaz de usuario.
-
-### Estructura de Carpetas
-
-```
+*   **Lenguaje:** [Kotlin](https://kotlinlang.org/)
+*   **UI Framework:** [Jetpack Compose](https://developer.android.com/jetpack/compose)
+*   **Arquitectura:** MVVM (Model-View-ViewModel) + Repository Pattern.
+  ```
 com.example.aftersunset/
 ├── data/           <-- Implementaciones de Firebase y Repositorios.
 ├── domain/         <-- Modelos de datos (Event, User) e Interfaces.
 ├── navigation/     <-- Rutas @Serializable y NavHost principal.
 ├── ui/
-│   ├── theme/      <-- Colores, Tipografías y Formas.
-│   ├── components/ <-- Componentes reutilizables (Botones, Cards).
-│   └── screens/    <-- Pantallas (Login, Home, Map, etc.).
-└── util/           <-- Helpers y extensiones.
-
+    ├── theme/      <-- Colores, Tipografías y Formas.
+    ├── components/ <-- Componentes reutilizables (Botones, Cards).
+    └── screens/    <-- Pantallas (Login, Home, Map, etc.).
 ```
+*   **Navegación:** Type-Safe Navigation (Type-safe routes con Kotlin Serialization).
+*   **Inyección de Dependencias:** Gestión manual orientada a la simplicidad y escalabilidad.
+*   **Backend:** 
+    *   **Firebase Auth:** Gestión de identidad de usuarios.
+    *   **Cloud Firestore:** Base de datos NoSQL escalable en tiempo real.
+*   **Librerías de Terceros:**
+    *   **Coil 3:** Carga de imágenes asíncrona y eficiente.
+    *   **Lottie:** Animaciones vectoriales de alta calidad.
+    *   **DiceBear API:** Generación procedimental de avatares.
 
-🎨 Estilo
------------------
-
-Para mantener la estética "Cyber-Night", utiliza los tokens de color definidos en `AfterSunsetTheme`:
-
--   **InkBlack** (`#0B0B1E`): Es nuestro negro profundo con un matiz azulado. Se usa para todos los fondos de pantalla y contenedores base.
-
--   **IndigoBloom** (`#712DA6`): Un violeta eléctrico diseñado para sombras, degradados de fondo y elementos decorativos.
-
--   **Pacific Cyan** (`#0F98B3`): Utilízalo para elementos secundarios, estados de selección, iconos del mapa y para dar ese toque tecnológico.
-
--   **Dragonfruit** (`#EB4990`): Nuestro color primario. Se usa para el logo, bordes destacados y botones de acción.
-
--   **PumpkinSpice** (`#FF6B00`): Este naranja vibrante representa la luz del atardecer. Úsalo siempre en combinación con *Dragonfruit* para crear el degradado de los botones de acción principal.
-
-![Paleta de colores](./images/color_palette.png)  
+---
 
 📦 Instalación
 --------------
+Si deseas probar el proyecto localmente, consulta nuestro [Manual de Instalación](./MANUAL_INSTALACION.md). 
 
 1.  Clona el repositorio.
 
@@ -66,3 +60,12 @@ Para mantener la estética "Cyber-Night", utiliza los tokens de color definidos 
 4.  Pide el archivo `google-services.json` para conectar con Firebase.
 
 5. Pide el valor de `MAPS_API_KEY` que necesitas colocar en **local.properties**
+
+---
+
+## 🎓 Proyecto Final (TFG)
+
+Este proyecto ha sido desarrollado como el **Proyecto Intermodular de Fin de Ciclo (TFG)** para el Grado Superior de **Desarrollo de Aplicaciones Multiplataforma (DAM)**. 
+
+El objetivo principal ha sido demostrar la capacidad de crear una solución móvil completa y escalable, poniendo especial énfasis en una **experiencia de usuario (UX)** y en la implementación de las últimas tecnologías y patrones de diseño recomendados por Google para el desarrollo nativo moderno en Android.
+
