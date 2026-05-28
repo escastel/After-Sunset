@@ -7,9 +7,11 @@
 
 **After Sunset** es una propuesta disruptiva en el ecosistema de aplicaciones de ocio nocturno. No es solo una ticketera; es una ventana inmersiva a la vida de la ciudad cuando cae el sol. Diseñada con un enfoque Mobile-First y una estética Cyber-Night, After Sunset redefine la forma en que los usuarios descubren, viven y comparten la noche malagueña.
 
-<video src="./media/AppAfterSunset.mp4" width="100%" controls>
-  Tu navegador no soporta el reproductor de vídeo.
-</video>
+
+
+https://github.com/user-attachments/assets/62bea5b5-e4fe-4aa9-b5d6-b402f2aaf40a
+
+
 
 ---
 
