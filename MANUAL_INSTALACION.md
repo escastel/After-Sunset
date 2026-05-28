@@ -20,7 +20,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 Clona el repositorio desde GitHub a tu máquina local:
 
 ```bash
-git clone https://github.com/tu-usuario/After_Sunset.git
+git clone https://github.com/escastel/After_Sunset.git
 ```
 
 ---
